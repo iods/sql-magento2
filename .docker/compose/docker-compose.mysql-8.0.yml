@@ -1,0 +1,18 @@
+# SQL for Magento 2
+# Version 0.1.0 [2022-11-19]
+# 
+# Copyright: Copyright (c) 2022, Rye Miller
+
+
+version: '3'
+
+services:
+  database:
+    container_name: magento2_mysql8
+    hostname: magento2.mysql
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - "./my.cnf:/my.cnf:ro"
+    

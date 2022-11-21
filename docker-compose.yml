@@ -1,0 +1,22 @@
+# SQL for Magento 2
+# Version 0.1.0 [2022-11-19]
+# 
+# Copyright: Copyright (c) 2022, Rye Miller
+version: '3'
+
+services:
+  database:
+    container_name: mariadb10.4
+    hostname: magento2.mariadb
+    image: mariadb:10.4
+    env_file:
+      - "./.env"
+    ports:
+      - "3306:3306"
+    volumes:
+      #- "./my.cnf:/root/my.cnf:ro"
+      - "./.docker/sql:/docker-entrypoint-initdb.d:ro"
+      - "./.docker/var/data:/var/lib/mysql:rw"
+      - "./.docker/var/logs:/var/log/mysql:rw"
+      - "./.docker/image/mariadb/10.4/conf.d:/etc/mysql/conf.d:ro"
+      # - "./.docker/image/mariadb/10.4/run:/usr/bin/local/run:ro"

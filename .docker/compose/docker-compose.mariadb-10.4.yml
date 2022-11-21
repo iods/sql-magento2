@@ -1,0 +1,11 @@
+# SQL for Magento 2
+# Version 0.1.0 [2022-11-19]
+# 
+# Copyright: Copyright (c) 2022, Rye Miller
+
+
+version: '3'
+
+services:
+  database:
+    container_name: database
