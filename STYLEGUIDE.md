@@ -30,15 +30,15 @@ Basics
  * Use [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) compliant times when storing time and date information.
  * Use only standard SQL functions vs. vendor-specific functions making it easier
    for reading and portability.
- * Use comments where possible. Use the `/* C Style where you can */` and always 
+ * Use comments, especially the why. Use the `/* C Style where you can */` and always 
    finish with a new line.
  * Be smart.
  
- ```
+```
 SELECT data_store
   FROM data_storage
  WHERE data_type = 'something.webp';
- ```
+```
 
 ### Avoid
 
